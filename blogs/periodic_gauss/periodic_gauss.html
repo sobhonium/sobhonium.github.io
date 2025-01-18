@@ -42,7 +42,7 @@
 <br>
 Consider the  following Gaussian function:
 \( g(x; \mu, \sigma) = e^{\frac{-(x-\mu)^2}{2\sigma^2}}, \) 
-where \(  \mu \)  is the position of the center of the peak and \( sigma \)  is the standard deviation such that this Gaussian function can be applied on 
+where \(  \mu \)  is the position of the center of the peak and \( \sigma \)  is the standard deviation such that this Gaussian function can be applied on 
 the 3D shape and tune the apposite boundaries to be align with one another. In one-dimension term, the Gaussian function can be employed to transer function f(x) fo a 
 periodic function  \( f^{*}(x) \) as follows:
 <br>
@@ -56,9 +56,9 @@ For 3-domensions, we can define periodicity function as a field: here we can def
 Let's say if we target point \( p_i=(x_i, y_i, z_i)\) whose current field is defined by an SDF \(f(x_i, y_i, z_i)\), 
 we can show \( f_{x}^{*}\) for explaining that we are making periodicity on x axis and show it with:
 
-<h3  style="text-align: center;"> \(f_{x}^{*}(x_i, y_i, z_i) =  (1-\Omega(x_i))f(x_i, y_i, z_i) + \Omega(x_i)f(n-x_i, y_i, z_i) \) </h3>
+<h3  style="text-align: center;"> \(f_{x}^{*}(x_i, y_i, z_i) =  (1-\Omega(x_i))f(x_i, y_i, z_i) + \Omega(x_i)f(n-x_i, y_i, z_i) \). </h3>
 
-we can continue to apply the same procedure for the y and z axis as well:
+We can continue to apply the same procedure for the y and z axis as well:
 
 <h3  style="text-align: center;"> \(f_{y}^{*}(x_i, y_i, z_i) =  (1-\Omega(y_i))f_{x}^{*}(x_i, y_i, z_i) + \Omega(y_i)f_{x}^{*}(x_i, n-y_i, z_i)\)</h3>
  in which \( f_{x}^{*}\) is already computed from the last step. Then, 
@@ -67,7 +67,7 @@ we can continue to apply the same procedure for the y and z axis as well:
 
  where this final \(f_{z}^{*}\) value is the periodic value for \(f(x_i, y_i, z_i)\) which is a field on \((x_i, y_i, z_i)\) too.
 
-
+<br>
 The following sample on the left, shows a non periodic shape and its lattice (3 unit cells on z-axis). When non-periodic shapes are used for lattice generations, 
 they lead to bumps (visible stair-cases) in lattice shapes.   On the right, however, this unit cell is made periodic and its lattice is 
 depicted, where the lattice structure gives a smooth 3D shapes.
