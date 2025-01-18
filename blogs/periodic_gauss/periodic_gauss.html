@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal surfaces</title>
+  <!-- Import model-viewer library -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
+  <!-- Include MathJax -->
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    /* Container setup */
+    .label-container {
+      text-align: center;
+      margin-bottom: 10px;
+      grid-column: span 4; /* The label spans across the entire row */
+    }
+
+    /* Container for the grid of models */
+    .model-container {
+      display: grid;                           /* Use grid layout */
+      grid-template-columns: repeat(4, 1fr);  /* Creates 14 equal-width columns */
+      gap: 10px;                               /* Space between items */
+      padding: 20px;
+      overflow-x: auto;                        /* Scrollable if content overflows */
+    }
+
+    /* Individual model-viewers */
+    model-viewer {
+      width: 100%;  /* Make model-viewer fill the grid cell */
+      height: 300px;  /* Adjust height */
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center;">Making non-periodic 3D shapes periodic using Gaussian transfer function</h1>
+
+  Many 3D shapes are needed to be periodic if we intend to repeat them in space for certain applications. One effective, yet simple, way for making 
+  3D shapes periodic is to use an enhancement technique utilizing a Gaussian function. 
+<br>
+Consider the  following Gaussian function:
+\( g(x; \mu, \sigma) = e^{\frac{-(x-\mu)^2}{2\sigma^2}}, \) 
+where \(  \mu \)  is the position of the center of the peak and \( sigma \)  is the standard deviation such that this Gaussian function can be applied on 
+the 3D shape and tune the apposite boundaries to be align with one another. In one-dimension term, the Gaussian function can be employed to transer function f(x) fo a 
+periodic function  \( f^{*}(x) \) as follows:
+<br>
+
+<h3  style="text-align: center;">
+
+\( f^{*}(x)=(1-g(x; 1, \sigma))f(x)+g(x; 1, \sigma)f(n-x),\)  </h3>
+
+The following sample on the left, shows a non periodic shape and its lattice (3 unit cells on z-axis). When non-periodic shapes are used for lattice generations, 
+they lead to bumps (visible stair-cases) in lattice shapes.   On the right, however, this unit cell is made periodic and its lattice is 
+depicted, where the lattice structure gives a smooth 3D shapes.
+  <!-- First row of models with label -->
+  <div class="model-container">
+    <label class="label-container">  </label>
+    <!-- Models -->
+    <model-viewer src="meshes/unit_non_period.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer>
+    <model-viewer src="meshes/lattice_non_periodic.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Lattice)</model-viewer>
+
+    <model-viewer src="meshes/unit_period.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Unit cell)</model-viewer>
+    <model-viewer src="meshes/lattice_periodic.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Lattice)</model-viewer>
+
+  </div>
+
+  
+
+
+  <!-- <model-viewer src="SIREN/output_mesh1.4.glb" alt="3D model 7" auto-rotate shadow-intensity="2" orientation="2 -1.5 1 0.0"></model-viewer> -->
+
+
+</body>
+</html>
