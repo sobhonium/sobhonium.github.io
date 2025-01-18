@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimal surfaces</title>
+  <title>SDF Shapes</title>
   <!-- Import model-viewer library -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
   <!-- Include MathJax -->
@@ -38,10 +38,12 @@
   <h1 style="text-align: center;">Making non-periodic 3D shapes periodic using Gaussian transfer function</h1>
 
   Many 3D shapes are needed to be periodic if we intend to repeat them in space for certain applications. One effective, yet simple, way for making 
-  3D shapes periodic is to use an enhancement technique utilizing a Gaussian function. 
+  3D shapes periodic is to use an enhancement technique utilizing a Gaussian function. For applying the Gaussian enhancement function, it's assumed that the 3D shape is represented by Sign Distance Function (SDF), where
+  the whole shape is represented by a scalr field. Such enhancement is applied on the SDF values and does not need the whole shape to be stored on Mem to do its operations. As a result of this, such technique helps
+  avoid using 3rd party softwares and can be applied straight on the function representing the shape. 
 <br>
 Consider the  following Gaussian function:
-\( g(x; \mu, \sigma) = e^{\frac{-(x-\mu)^2}{2\sigma^2}}, \) 
+\( \Omega = g(x; \mu, \sigma) = e^{\frac{-(x-\mu)^2}{2\sigma^2}}, \) 
 where \(  \mu \)  is the position of the center of the peak and \( \sigma \)  is the standard deviation such that this Gaussian function can be applied on 
 the 3D shape and tune the apposite boundaries to be align with one another. In one-dimension term, the Gaussian function can be employed to transer function f(x) fo a 
 periodic function  \( f^{*}(x) \) as follows:
@@ -129,8 +131,8 @@ Gyroid shape to be non-periodic in [0,1] domain.
   <!-- <model-viewer src="SIREN/output_mesh1.4.glb" alt="3D model 7" auto-rotate shadow-intensity="2" orientation="2 -1.5 1 0.0"></model-viewer> -->
 
 
-  <h2>Other Methods</h2>
-  Another method that can be used for making shapes periodic is by using 
+
+  Additionally, another method that can be used for making shapes periodic is by using 
   
 <h3  style="text-align: center;">
 
@@ -151,7 +153,7 @@ which considers both sides for periodicity as shown here:
 
 
 
-
+This, however, is left for future plots to be added in here.
 
 </body>
 </html>
