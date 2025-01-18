@@ -70,18 +70,21 @@ We can continue to apply the same procedure for the y and z axis as well:
 <br>
 The following sample on the left, shows a non periodic shape and its lattice (3 unit cells on z-axis). When non-periodic shapes are used for lattice generations, 
 they lead to bumps (visible stair-cases) in lattice shapes.   On the right, however, this unit cell is made periodic and its lattice is 
-depicted, where the lattice structure gives a smooth 3D shapes.
+depicted, where the lattice structure gives a smooth 3D shapes. The two examples below are showing \( \sin(\frac{2\pi x}{a})\cos(\frac{2\pi y}{a})+  
+\sin(\frac{2\pi y}{a})\cos(\frac{2\pi z}{a})  +    \sin(\frac{2\pi z}{a})\cos(\frac{2\pi x}{a})\) where \(a=0.66\) and \(a=0.4\) respectively where these values makes the orignial 
+Gyroid shape to be non-periodic in [0,1] domain.
 
 
   <!-- First row of models with label -->
   <div class="model-container">
-    <label class="label-container">  </label>
+    <label class="label-container"> </label>
     <!-- Models -->
-    <model-viewer src="meshes/unit_non_period1.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer>
-    <model-viewer src="meshes/lattice_non_periodic1.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Lattice)</model-viewer>
+     
+    <model-viewer src="meshes/unit_non_period1.glb" alt="3D model 1"  camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer>
+    <model-viewer src="meshes/lattice_non_periodic1.glb" alt="3D model 1" camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Lattice)</model-viewer>
 
-    <model-viewer src="meshes/unit_period1.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Unit cell)</model-viewer>
-    <model-viewer src="meshes/lattice_periodic1.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Lattice)</model-viewer>
+    <model-viewer src="meshes/unit_period1.glb" alt="3D model 1" camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Unit cell)</model-viewer>
+    <model-viewer src="meshes/lattice_periodic1.glb" alt="3D model 1"  camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Lattice)</model-viewer>
 
   </div>
 
@@ -90,11 +93,11 @@ depicted, where the lattice structure gives a smooth 3D shapes.
     <div class="model-container">
       <label class="label-container">  </label>
       <!-- Models -->
-      <model-viewer src="meshes/unit_non_period2.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer>
-      <model-viewer src="meshes/lattice_non_periodic2.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Lattice)</model-viewer>
+      <model-viewer src="meshes/unit_non_period2.glb" alt="3D model 1"  camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer>
+      <model-viewer src="meshes/lattice_non_periodic2.glb" alt="3D model 1" camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Lattice)</model-viewer>
   
-      <model-viewer src="meshes/unit_period2.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Unit cell)</model-viewer>
-      <model-viewer src="meshes/lattice_periodic2.glb" alt="3D model 1"  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Lattice)</model-viewer>
+      <model-viewer src="meshes/unit_period2.glb" alt="3D model 1" camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Unit cell)</model-viewer>
+      <model-viewer src="meshes/lattice_periodic2.glb" alt="3D model 1"  camera-controls  auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Periodic (Lattice)</model-viewer>
   
     </div>
 
