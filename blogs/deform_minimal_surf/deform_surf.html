@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal surfaces</title>
+  <!-- Import model-viewer library -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
+  <!-- Include MathJax -->
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    /* Container setup */
+    .label-container {
+      text-align: center;
+      margin-bottom: 10px;
+      grid-column: span 4; /* The label spans across the entire row */
+    }
+
+    /* Container for the grid of models */
+    .model-container {
+      display: grid;                           /* Use grid layout */
+      grid-template-columns: repeat(4, 1fr);  /* Creates 14 equal-width columns */
+      gap: 10px;                               /* Space between items */
+      padding: 20px;
+      overflow-x: auto;                        /* Scrollable if content overflows */
+    }
+
+    /* Individual model-viewers */
+    model-viewer {
+      width: 100%;  /* Make model-viewer fill the grid cell */
+      height: 300px;  /* Adjust height */
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center;">Deforming Minimal Surfaces</h1>
+
+  
+
+
+
+  
+    <!-- First row of models with label -->
+    <div class="model-container">
+      <label class="label-container">  </label>
+      <!-- Models -->
+      <model-viewer src="meshes/diamond.glb" alt="3D model 1"  camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer>
+      <!-- <model-viewer src="meshes/diamond2.glb" alt="3D model 1"  camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer> -->
+   
+  
+    </div>
+
+    
+    <!-- First row of models with label -->
+    <div class="model-container">
+      <label class="label-container">  </label>
+      <!-- Models -->
+      <!-- <model-viewer src="meshes/diamond.glb" alt="3D model 1"  camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer> -->
+      <model-viewer src="meshes/diamond2.glb" alt="3D model 1"  camera-controls auto-rotate shadow-intensity="2" orientation="2 -1.7 1 0.0">Non-Periodic (Unit cell)</model-viewer>
+   
+  
+    </div>
+
+    
+
+
+  <!-- <model-viewer src="SIREN/output_mesh1.4.glb" alt="3D model 7" auto-rotate shadow-intensity="2" orientation="2 -1.5 1 0.0"></model-viewer> -->
+
+
+</body>
+</html>
