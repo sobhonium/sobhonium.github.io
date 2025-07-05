@@ -9,30 +9,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AI-Agents</title>
+    <title>Graphs</title>
     
     <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="../css/blogs_style.css">
+    <link rel="stylesheet" href="../../css/blogs_style.css">
 </head>
 <body>
 
 <header>
-    <h1>AI Competing in a Weverwolf Game</h1>
+    <h1>AI Agents Competing in a Weverwolf Game</h1>
 </header>
 
 <div class="container">
 
     <!-- Story Content Section -->
     <div class="story-content">
-<!--         
+        
         <h2>
  Introduction
- </h2> -->
+ </h2>
  
         <p>
-            Large Lanaguage Models (LLMs) are the backbone of what we use today in ChatGPT or others. In simple terms, they are the brain of such system to work.
+            Large Lanaguage Models (LLMs) are the backbone of what we use today in ChatGPT or other generative word tool models. In simple terms, they are the brain of such system to work.
             Despite their success in doing many language understanding tasks, there any many papers and blog posts [1] evaluating the reasoning abilities of LLMs. That is a major
-            challenge in 2025 to have an LLM to be fully capable of doing a reasining that we expect. In old days before 2022, for any new problems
+            challenge in 2025 to have an LLM to be fully capable of doing reasining that we expect. In old days before 2022, for any new problems
             in training a pattern if there was a slightly shift in data pattern, the whole settup and data gathering should have been redefined to compensate for such shift.
             Reasining, on another hand, helps to just figure this shift out and do the job by avoiding the repeatitive tasks. Such reasoning should extrapolate 
             the knowledge we have already gathered in a task to extend the understading and knowledge to other task without
@@ -56,7 +56,7 @@
             For more information about how this game is played just visit [2].
 
             <br>
-            
+            </p>
 
 
              <p>
@@ -66,6 +66,24 @@
  
 <br>
 
+   <h2>
+ Challenges
+ </h2>
+  <li>
+ Using light llm model like deepseek is quite limited and it makes alot of mistakes in targeting
+ teamates. This code here is run using LLAMA3 on Groq for faster resposnes.
+</li>
+ <li>
+ After a few rounds of talkings, the amount of data is collected is so dramatic.
+No all models allow using a long text input for feeding into llm to get the analysis.
+</li>
+<li>
+If rounds of game increases the some APIs ban you of using more of their abilites.
+</li>
+<li>
+One can use Ollam for such limitation, but using Ollama takes 30 sec for each speaker to get their comments.
+However, using APIs like what Groq offers, it only takes seconds to get a reply.
+</li>
  <h2>
  Resources
  </h2>
@@ -91,3 +109,4 @@
 </html>
 
 
+</li>
