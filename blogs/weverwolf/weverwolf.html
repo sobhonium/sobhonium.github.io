@@ -64,13 +64,29 @@
  
  </p>
  
+      <h2>
+ Implementation
+ </h2>
+<p>
+ 
+    To design the game, 6 players are defined as two wolves and 4 villegers to compete. The wolves know their teamates and each one's role
+    is hard coded in the game.
+ To implement this game, LangGraph is used for conversational orchestration. 
+ What it does is it actually help you mange the turns in speaking and use LLMs in a stateful graph to see what the next path
+ in the game is. This manging turns and decision making is left to a moderator node (named God) to manage everything automatically.
+  See the code in <a href="">here</a>. 
+  
+   <img src="../../assets/images/blog_images/wolves3.png" alt="Data Plot" class="custom-img">
+
+
+ </p>
 <br>
 
    <h2>
  Challenges
  </h2>
   <li>
- Using light llm model like deepseek is quite limited and it makes alot of mistakes in targeting
+ Using light llm model like deepseek (deepseek-coder:1.3b) is quite limited and it makes alot of mistakes in targeting
  teamates. This code here is run using LLAMA3 on Groq for faster resposnes.
 </li>
  <li>
